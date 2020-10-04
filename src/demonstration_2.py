@@ -30,6 +30,35 @@ Return:
     "LambdaSchool"
 ]
 """
+
+
 def lambda_school(n):
     # Your code here
+    # myList = []
+    # for i in range(1, n + 1):
+    #     if i % 3 == 0 and i % 5 == 0:
+    #         myList.append("LambdaSchool")
+    #     elif i % 3 == 0:
+    #         myList.append("Lambda")
+    #     elif i % 5 == 0:
+    #         myList.append("School")
+    #     else:
+    #         myList.append(str(i))
+    # return myList
 
+    returnValue = []
+    for i in range(1, n + 1):
+        output = ""
+        if i % 3 == 0:
+            output += "Fizz"
+        if i % 5 == 0:
+            output += "Buzz"
+        if output == "":
+            output = str(i)
+
+        returnValue.append(output)
+
+    return returnValue
+
+
+print(lambda_school(30))
